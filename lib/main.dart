@@ -4,7 +4,7 @@ import 'package:saas/views/events.dart';
 import 'package:saas/views/searchPage.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {

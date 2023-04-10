@@ -54,9 +54,9 @@ class _EventDetailsState extends State<EventDetails> {
                       ['organiser_name'],
                   style: const TextStyle(
                       fontSize: 15, fontWeight: FontWeight.w400)),
-              subtitle: Text(
+              subtitle: const Text(
                 "Organizer",
-                style: const TextStyle(fontSize: 12),
+                style: TextStyle(fontSize: 12),
               ),
             ),
             SizedBox(

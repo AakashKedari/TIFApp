@@ -16,17 +16,14 @@ class _SplashScreenState extends State<SplashScreen> {
     setState(() {});
     super.initState();
     Timer(const Duration(seconds: 3), () {
-      Navigator.push(
-          (context), MaterialPageRoute(builder: (context) => EventPage()));
+      Navigator.push((context),
+          MaterialPageRoute(builder: (context) => const EventPage()));
     });
   }
 
   @override
   Widget build(BuildContext context) {
     setState(() {});
-    Size size = MediaQuery.of(context).size;
-    double height = size.height;
-    double width = size.width;
 
     return Scaffold(
       body: SafeArea(

@@ -1,7 +1,8 @@
 import 'dart:convert';
 
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/scheduler.dart';
+
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:http/http.dart' as http;
 import 'package:saas/views/eventdetails.dart';
@@ -54,24 +55,27 @@ class _EventPageState extends State<EventPage> with TickerProviderStateMixin {
       child: Scaffold(
           backgroundColor: Colors.white70,
           appBar: AppBar(
+            textTheme: TextTheme(),
             backgroundColor: Colors.white,
-            title: const Text(
-              "Events",
-              style: TextStyle(color: Colors.black),
-              textAlign: TextAlign.right,
-            ),
+            title: Container(
+                width: double.infinity,
+                child: const Text(
+                  "Events",
+                  style: TextStyle(color: Colors.black),
+                  textAlign: TextAlign.left,
+                )),
             actions: [
               IconButton(
                 onPressed: () => Navigator.push(
                     context,
                     MaterialPageRoute(
                         builder: (context) => SearchPage(info: jsonResponse))),
-                icon: const Icon(Icons.search),
+                icon: const Icon(CupertinoIcons.search),
                 color: Colors.black,
               ),
               IconButton(
                 onPressed: () {},
-                icon: const Icon(Icons.more_vert),
+                icon: const Icon(CupertinoIcons.ellipsis_vertical_circle),
                 color: Colors.black,
               )
             ],
